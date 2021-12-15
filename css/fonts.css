@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: url('../fonts/subset-BebasNeue-Book.eot');
+    src: url('../fonts/?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-BebasNeue-Book.woff2') format('woff2'),
+        url('../fonts/subset-BebasNeue-Book.woff') format('woff'),
+        url('../fonts/subset-BebasNeue-Book.ttf') format('truetype'),
+        url('../fonts/subset-BebasNeue-Book.svg#BebasNeue-Book') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/subset-Montserrat-Bold.eot');
+    src: url('../fonts/subset-Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/subset-Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/subset-Montserrat-Bold.woff') format('woff'),
+        url('../fonts/subset-Montserrat-Bold.ttf') format('truetype'),
+        url('../fonts/subset-Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
