@@ -12,15 +12,12 @@ const inputFocus = input.forEach(item => {
 })
 
 const click = runBtn.addEventListener('click', () => {
+    let timerInitValue = null;
     runBtn.disabled = true;
     input.forEach(item => {
         item.classList.add('falseTarget');
+        item.classList.add('white');
     })
-    minutesArea.classList.add('white');
-    secondsArea.classList.add('white');
-    
-    
-    let timerInitValue = null;
 
     const startCount = setInterval(() => {
         timerInitValue = parseInt(minutesArea.value) * 60 + parseInt(secondsArea.value);
@@ -34,8 +31,10 @@ const click = runBtn.addEventListener('click', () => {
         secondsArea.value = supFormat(getSeconds);
     
         if(timerInitValue <= 0) {
-            minutesArea.value = '00';
-            secondsArea.value = '00';
+            input.forEach(item => {
+                item.classList.remove('falseTarget');
+                item.classList.remove('white');
+            })
             runBtn.disabled = false;
             clearInterval(startCount);
         }
