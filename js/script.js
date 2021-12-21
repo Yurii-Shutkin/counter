@@ -9,6 +9,7 @@ console.log(input);
 const inputFocus = input.forEach(item => {
     item.addEventListener('click', () => {
         item.value = '';
+        border.classList.add('green');
     })
 })
 
@@ -37,6 +38,8 @@ const click = runBtn.addEventListener('click', () => {
                 item.classList.remove('falseTarget');
                 item.classList.remove('white');
             })
+            border.classList.remove('green');
+            border.classList.remove('red');
             runBtn.disabled = false;
             clearInterval(startCount);
         }
