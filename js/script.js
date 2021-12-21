@@ -19,7 +19,7 @@ const click = runBtn.addEventListener('click', () => {
     minutesArea.classList.add('white');
     secondsArea.classList.add('white');
     
-
+    
     let timerInitValue = null;
 
     const startCount = setInterval(() => {
@@ -32,17 +32,6 @@ const click = runBtn.addEventListener('click', () => {
 
         minutesArea.value = supFormat(getMinutes);
         secondsArea.value = supFormat(getSeconds);
-
-        // const isValid = (num, currentValue)=> {
-        //     if(isNaN(num) || num.trim()) {
-        //         return num += currentValue;
-        //     }
-        //     return num;
-        // }
-
-        // secondsArea.value = (isValid(secondsArea.value, timerInitValue));
-        // minutesArea.value = (isValid(minutesArea.value, timerInitValue));
-
     
         if(timerInitValue <= 0) {
             minutesArea.value = '00';

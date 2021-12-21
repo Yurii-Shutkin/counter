@@ -110,3 +110,23 @@ input::-webkit-inner-spin-button {
 .clock-face__settings {
     cursor: pointer;
 }
+
+@media (max-width: 576px) {
+    input {
+        font-size: 146px;
+    }
+
+    .clock-face__border{
+        width: 436px;
+        height: 436px;
+    }
+
+    .clock-face {
+        width: 420px;
+        height: 420px;
+    }
+
+    .clock-face__wrap {
+        top: 20%;
+    }
+}
