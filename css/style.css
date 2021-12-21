@@ -43,6 +43,14 @@ input::-webkit-inner-spin-button {
     color: #fff;
 }
 
+.green {
+    background-color: #0a9073;
+}
+
+.red {
+    background-color: #900A0A
+}
+
 .falseTarget {
     pointer-events: none;
 }
@@ -53,7 +61,6 @@ input::-webkit-inner-spin-button {
     align-items: center;
     width: 518px;
     height: 518px;
-    background: #900A0A;
     border-radius: 50%;
     box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
 }
@@ -83,6 +90,10 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
+}
+
+.screen-div {
+    padding: 0 0 20px 0;
 }
 
 .screen-input__minutes {

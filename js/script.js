@@ -1,4 +1,5 @@
 const input = Array.from(document.getElementsByTagName('input'));
+const border = document.querySelector('.clock-face__border')
 const minutesArea = document.querySelector('.screen-input__minutes');
 const secondsArea = document.querySelector('.screen-input__seconds');
 const runBtn = document.querySelector('.clock-face__button');
@@ -13,6 +14,7 @@ const inputFocus = input.forEach(item => {
 
 const click = runBtn.addEventListener('click', () => {
     let timerInitValue = null;
+    border.classList.add('red');
     runBtn.disabled = true;
     input.forEach(item => {
         item.classList.add('falseTarget');
