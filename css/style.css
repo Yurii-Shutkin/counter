@@ -114,7 +114,8 @@ input::-webkit-inner-spin-button {
 @media (max-width: 576px) {
     input {
         font-size: 146px;
-        margin-bottom: 0px;
+        margin-bottom: 15px;
+        line-height: 0;
     }
 
     .clock-face__border{
@@ -128,10 +129,11 @@ input::-webkit-inner-spin-button {
     }
 
     .clock-face__wrap {
-        top: 16%;
+        top: 25%;
     }
 
     .clock-face__button {
+        margin-bottom: 20px;
         font-size: 14px;
     }    
 }
