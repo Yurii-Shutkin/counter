@@ -117,16 +117,16 @@ input::-webkit-inner-spin-button {
     }
 
     .clock-face__border{
-        width: 416px;
-        height: 416px;
+        width: 396px;
+        height: 396px;
     }
 
     .clock-face {
-        width: 400px;
-        height: 400px;
+        width: 380px;
+        height: 380px;
     }
 
     .clock-face__wrap {
-        top: 20%;
+        top: 14%;
     }
 }
