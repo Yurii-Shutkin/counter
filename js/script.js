@@ -6,8 +6,6 @@ const minutesArea = document.querySelector('.screen-input__minutes');
 const secondsArea = document.querySelector('.screen-input__seconds');
 const runBtn = document.querySelector('.clock-face__button');
 
-inputs[0].focus();
-
 inputs.forEach(item => {
     item.oninput = function() {
         this.value = this.value.substr(0, 2);
