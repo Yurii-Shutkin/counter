@@ -58,6 +58,7 @@ const click = runBtn.addEventListener('click', () => {
             });
             border.classList.remove('green');
             border.classList.remove('red');
+            inputs[0].placeholder = '00';
             runBtn.disabled = false;
             clearInterval(startCount);
         };
