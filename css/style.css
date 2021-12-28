@@ -51,6 +51,10 @@ input::-webkit-inner-spin-button {
     background-color: #900A0A
 }
 
+.grey {
+    background-color: #27252c;
+}
+
 .falseTarget {
     pointer-events: none;
 }
@@ -112,7 +116,7 @@ input::-webkit-inner-spin-button {
     font-size: 16px;
     letter-spacing: 0.6em;
     text-transform: uppercase;
-    color: inherit;
+    color: inherit; 
     margin-bottom: 40px;
     cursor: pointer;
 }

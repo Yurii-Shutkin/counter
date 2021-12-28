@@ -6,6 +6,8 @@ const minutesArea = document.querySelector('.screen-input__minutes');
 const secondsArea = document.querySelector('.screen-input__seconds');
 const runBtn = document.querySelector('.clock-face__button');
 
+inputs[0].focus();
+
 inputs.forEach(item => {
     item.oninput = function() {
         this.value = this.value.substr(0, 2);
@@ -23,6 +25,7 @@ const inputFocus = inputs.forEach(item => {
 });
 
 const click = runBtn.addEventListener('click', () => {
+    
     border.classList.add('red');
     runBtn.disabled = true;
     inputs.forEach(item => {
@@ -33,17 +36,24 @@ const click = runBtn.addEventListener('click', () => {
         if(item.value > item.max) item.value = item.max;
     });    
         
+    let timerInitValue = parseInt(minutesArea.value) * 60 + parseInt(secondsArea.value);
+    const startValue = timerInitValue;
     const startCount = setInterval(() => {
-        let timerInitValue = parseInt(minutesArea.value) * 60 + parseInt(secondsArea.value);
         timerInitValue--;
         const getMinutes = Math.floor(timerInitValue / 60 % 60);
         const getSeconds = Math.floor(timerInitValue % 60);
-        
+
+         border.style.background = `conic-gradient(
+            #900A0A ${360 * timerInitValue / startValue}deg,
+            #27252c ${360 * timerInitValue / startValue}deg
+        )`
+
         const supFormat = num => num < 10 ? num = '0' + num : num;
         minutesArea.value = supFormat(getMinutes);
         secondsArea.value = supFormat(getSeconds);
     
         if(timerInitValue <= 0) {
+            border.style.removeProperty('background');
             inputs.forEach(item => {
                 item.classList.remove('falseTarget', 'white');
                 item.value = '';
@@ -53,6 +63,5 @@ const click = runBtn.addEventListener('click', () => {
             runBtn.disabled = false;
             clearInterval(startCount);
         };
-
     }, 1000);
 });
